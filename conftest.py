@@ -16,7 +16,7 @@ def browser(request):
     user_lang = request.config.getoption("lang")
     browser = None
     if browser_name == "firefox":
-        driver = Service("../geckodriver")
+        driver = Service("./geckodriver")
         options = FirefoxOption()
         options.set_preference("intl.accept_languages", user_lang)
         browser = webdriver.Firefox(service=driver, options=options)
